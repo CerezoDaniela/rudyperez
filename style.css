@@ -193,7 +193,7 @@ a:hover, a:focus {
 }
 #galeria h2 {
 	text-align: center;
-    padding:5% 0 0px 0px;
+    padding:3% 0% 3% 0%;
 }
 #galeria h2:after{
 	text-decoration-line: underline;
@@ -676,3 +676,22 @@ p {
         background: #e6eaec; 
         padding: 25px 30px; 
     }
+/*galeria*/
+#contGaleria{
+    background-color: #000;
+}
+.cargaMas{
+    background-color: #000;
+    width: 5%;
+}
+.image{
+    border:1px solid blue;
+}
+.contImg{
+    margin: 10px 0px;
+}
+.play{
+    position: absolute;
+    padding: 5.9%;
+}
+/*finGaleria*/
