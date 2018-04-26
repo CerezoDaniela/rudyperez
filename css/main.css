@@ -1,0 +1,1021 @@
+body, html{
+    overflow-x: hidden;
+}
+
+/*-----------------*/
+/*     COLORES     */
+/*-----------------*/
+
+.blanco{
+    color: white !important;
+}
+
+.rojo{
+    color: #841a11;
+}
+
+.colorado{
+    color: #CC144A !important;
+}
+
+.negro{
+    color: black;
+}
+
+.dorado{
+    text-decoration-line: underline;
+    color: #D4AC0D !important;
+    font-weight: bold;
+}
+
+/*--------------------------*/
+/*     LETRAS DE GOOGLE     */
+/*--------------------------*/
+
+.Anton{
+    font-family: 'Anton', sans-serif;
+}
+
+.Black-Ops-One{
+    font-family: 'Black Ops One', cursive;
+}
+
+.Montserrat{
+    font-family: 'Montserrat', cursive;
+}
+
+.Keania-One{
+    font-family: 'Keania One', cursive;
+}
+
+.Iceland{
+    font-family: 'Iceland', cursive;
+}
+
+.Iceberg{
+    font-family: 'Iceberg', cursive;
+}
+
+/*---------------------------*/
+/*     ESTILOS GENERALES     */
+/*---------------------------*/
+
+.center{
+    text-align: center;
+}
+
+.card{
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+/*-------------------------------*/
+/*     ANIMACIÓN DE IMAGENES     */
+/*-------------------------------*/
+
+.div-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div-img .img {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+}
+
+.div-img .text {
+    font-family: 'Iceland';
+    padding-top: 5px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    transform: translate(0px);
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    opacity: 0;
+    transition: transfom opacity 1.5s;
+}
+
+.div-img:hover .img {
+    transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -o-transform: scale(0.8);
+}
+
+.div-img:hover .text {
+    transform: translate(0px, -20px);
+    opacity: 1;
+}
+
+/*------------------------*/
+/*     REDES SOCIALES     */
+/*------------------------*/
+
+.botones-sociales {
+    position: fixed;
+    top: 230px;
+    width: 45px;
+    z-index: 9999;
+}
+
+.botones-sociales #facebook-btn .social{
+    background-color: #33353B;
+    background-image: url('../img/facebook-logo.png');
+    background-position: 10px 10px;
+}
+
+.botones-sociales #twitter-btn .social{
+    background-color: #33353B;
+    background-image: url('../img/gorjeo.png');
+    background-position: 10px 10px;
+}
+
+.botones-sociales #instagram-btn .social{
+    background-color: #33353B;
+    background-image: url('../img/logo-de-instagram.png');
+    background-position: 10px 10px;
+}
+
+.botones-sociales #youtube-btn .social {
+    background-color: #33353B;
+    background-image: url('../img/youtube.png');
+    background-position: 10px 10px;
+}
+
+.botones-sociales #facebook-btn:hover .social {
+    background-color: #3A5795;
+    width: 110px;
+}
+
+.botones-sociales #twitter-btn:hover .social {
+    background-color: #5EA9DD;
+    width: 110px;
+}
+
+.botones-sociales #instagram-btn:hover .social {
+    background-color: #2A5B83;
+    width: 110px;
+}
+
+.botones-sociales #youtube-btn:hover .social {
+    background-color: #CC181E;
+    width: 110px;
+}
+
+.botones-sociales a:hover .texto{
+    display: block;
+}
+
+.botones-sociales .texto{
+    color: #FFFFFF;
+}
+
+.derecha{
+    right: 0;
+}
+
+.derecha .social {
+    -moz-transition: background-color 0.4s ease-in 0s;
+    -webkit-transition: background-color 0.4s ease-in 0s;
+    background-repeat: no-repeat;
+    display: block;
+    float: right;
+    height: 43px;
+    margin-bottom: 2px;
+    width: 43px;
+}
+
+.derecha .texto {
+    display: none;
+    float: left;
+    font-size: 80%;
+    font-weight: bold;
+    margin: 11px 0 11px 43px;
+    white-space: nowrap;
+}
+
+/*----------------*/
+/*     HEADER     */
+/*----------------*/
+
+#menu{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 80px;
+}
+
+#menu img{
+    width: 190px;
+    height: 65px;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#menu ul{
+    padding: 15px;
+    margin: 0;
+}
+
+.menu{
+    height: 80px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: initial;
+    margin-bottom: 0px;
+}
+
+.nav > li > a:hover {
+    color: #CC144A !important;
+}
+
+.black{
+    background-color: #080B0C !important;
+    transition: all 0.5s ease, outline 0.000001s;
+}
+
+.collapse.show{
+    background-color: #080B0C none repeat scroll 0% 0%;
+}
+
+/*---------------*/
+/*     VIDEO     */
+/*---------------*/
+
+#video{
+    width: 100%;
+    height: 759px;
+    float: left;
+    display: inline;
+}
+
+/*------------------*/
+/*     NOSOTROS     */
+/*------------------*/
+
+#nosotros{
+    width: 100%;
+    height: 400px;
+    float: left;
+    display: inline;
+    background: #DDDDDD;
+    background-image: url('../img/box-g.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+#nosotros h2{
+    padding: 8% 0 3% 0;
+    font-style: italic;
+}
+
+#nosotros p{
+    font-size: 25px;
+}
+#nosotros strong {
+    color: black;
+    font-family: sans-serif;
+}
+
+/*------------------*/
+/*     SERVICES     */
+/*------------------*/
+
+#services{
+    width: 100%;
+    height: auto;
+    float: left;
+    display: inline;
+    background: black;
+}
+
+#services h2 {
+    padding: 8% 0 3% 0;
+    font-style: italic;
+    text-decoration-line: underline;
+}
+
+#services img {
+    width: 80%;
+}
+
+.serv {
+    margin-left: 83px;
+}
+
+/*-----------------*/
+/*     EVENTOS     */
+/*-----------------*/
+
+#eventos{
+    width: 100%;
+    height: auto;
+    float: left;
+    display: inline;
+    background: #A52631;
+}
+
+#eventos h2 {
+    padding: 8% 0 3% 0;
+    font-style: italic;
+}
+
+#eventos .card{
+    margin-left: 80px;
+}
+
+@media only screen and (max-width: 750px) {
+    #eventos .card{
+        margin-left: 0px;
+    }
+}
+
+/*-----------------*/
+/*     GALERIA     */
+/*-----------------*/
+
+/* DANNY */
+
+#contGaleria{
+    background-color: #F2A30F;
+}
+
+.cargaMas{
+    background-color: #F2A30F;
+    width: 5%;
+}
+
+.image{
+    border:1px solid blue;
+}
+
+.contImg{
+    margin: 10px 0px;
+}
+
+.play{
+    position: absolute;
+    padding: 5.9%;
+}
+
+.column{
+    flex: 50%;
+    padding: 0 4px;
+}
+
+/* JEZZ */
+
+#galeria {
+    width: 100%;
+    height: auto;
+    float: left;
+    display: inline;
+    background: #F2A30F;
+}
+
+#galeria h2 {
+    padding: 8% 0 3% 0;
+    font-style: italic;
+    text-decoration-line: underline;
+}
+
+#galeria h2:before{
+    text-decoration-line: underline;
+}
+
+#galeria button{
+    border: 0;
+    margin: auto;
+    display: block;
+    background: none;
+}
+
+#galeria img{
+    margin:auto;
+    display:block;
+}
+
+.flecha{
+    padding: 20px 0 20px 0;
+}
+
+/*------------------*/
+/*     CONTACTO     */
+/*------------------*/
+
+#contacto{
+    width: 100%;
+    height: 620px;
+    float: left;
+    display: inline;
+}
+
+#contacto h2{
+    padding: 8% 0 3% 0;
+    font-style: italic;
+}
+
+#contacto p{
+    color:#787878;
+    padding-top: 15px;
+}
+
+.icono-u{
+    padding: 15px 15px 15px 15px;
+    margin: 34px 8px 33px 8px;
+}
+
+.icono-t-c{
+    padding: 15px 15px 15px 15px;
+    margin: 17px 8px 17px 8px;
+}
+
+.submit{
+    border: none;
+    color: white;
+    background: black;
+    border-radius: 9px;
+    padding: 5px 15px 5px 15px;
+}
+
+.submit:hover{
+    background: #841a11;
+}
+
+.input-style{
+    width: 100%;
+    border-radius: 7px;
+    background: lavender;
+}
+
+.title-area .title span {
+    color: #FF5A19;
+}
+
+.title-area .title::before {
+    background-color: #FF5A19;
+}
+
+/*----------------*/
+/*     FOOTER     */
+/*----------------*/
+
+#footer{
+    width: 100%;
+    height: auto;
+    float: left;
+    display: inline;
+    background: black;
+}
+
+#footer p{
+    height: 14px;
+    color: white;
+    font-size: 11px;
+    padding-top: 0px;
+    margin: 8px 0 8px 0;
+}
+
+.footer-derechos{
+    width: 100%;
+    font-weight: bolder;
+    font-family: sans-serif;
+    background-color: black;
+}
+
+/*--------------------------------*/
+/*     ESTILO DE DISPOSITIVOS     */
+/*--------------------------------*/
+
+/* ipad-pro */
+@media(max-width: 1199px){
+    #menu img {
+        margin-left: 0;
+    }
+    
+    .menu{
+        font-size: 14px;
+    }
+}
+
+/* ipad */
+@media(max-width: 991px){
+    .menu{
+        font-size: 13px;
+    }
+    
+    #nosotross h2 {
+        padding: 7% 0 30px 0;
+    }
+    
+    #nosotros p {
+        font-size: 15px;
+        margin: 0 90px 0 90px;
+    }
+    
+    #nosotros img{
+        float: right;
+        width: 26%;
+        margin: -13em -65px 0 0;
+    }
+    
+    #nosotros {
+        height: 280px;
+    }
+    
+    #services img {
+        width: 100%;
+        margin: 0 0 0 50px;
+    }
+    
+    #eventos img {
+        padding: 0 0 0 0;
+        width: 100%;
+    }
+    
+    .input-group-btn {
+        width: 21% !important;
+    }
+    
+    #eventos {
+        height: auto;
+    }
+    
+    .serv {
+        margin-left: 0;
+    }
+    
+    #galeria img {
+        width: 100%;
+    }
+    
+    #contacto {
+        height: auto;
+    }
+    
+    #contacto p{
+        font-size: 15px;
+        margin: 0;
+    }
+    
+    #contacto img{
+        float: left;
+    }
+    
+    .mapa{
+        width: 100%;
+    }
+}
+
+@media(max-width: 767px){
+    #menu {
+        width: 100%;
+        height: 80px;
+        z-index: 1;
+        position: fixed;
+        background-color: transparent;
+    }
+
+    #services {
+        height: auto;
+    }
+    
+    #services img {
+        width: 40%;
+        margin: 5px 0px 0 100px;
+    }
+
+    #eventos {
+        height: auto;
+    }
+
+    .hidden-eventos{
+        display: none;
+    }
+
+    #eventos img {
+        padding: 0 0 0 0;
+    }
+
+    #eventos div {
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
+    .serv {
+        margin-left: 100px;
+    }
+
+    #contacto p {
+        font-size: 15px;
+        margin: -13px 228px 13px 50px;
+    }
+}
+
+@media(max-width: 640px){
+    #menu {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        height: 80px;
+        background-color: transparent;
+    }
+    
+    #video{
+        height: 100%; 
+    }
+    
+    #nosotros img {
+        float: right;
+        width: 26%;
+        margin: -14em -65px 0 0;
+    }
+
+    #services {
+        height: auto;
+    }
+    
+    #services img {
+        width: 40%;
+        margin: 5px 0px 0 100px;
+    }
+
+    #eventos {
+        height: auto;
+    }
+
+    .hidden-eventos{
+        display: none;
+    }
+
+    #eventos img {
+        padding: 0 0 0 3px;
+    }
+
+    #eventos div {
+        padding-bottom: 10px;
+        width: 100%;
+    }
+}
+
+/* iphone6, nexus */
+@media(max-width: 480px){
+    #menu{
+        height: 80px;
+        background-color: transparent;
+    }
+
+    #video{
+        height: 100%;
+    }
+    
+    #nosotros img{
+        width: 45%;
+        margin-left: 25%;
+        margin-top: -74%;
+    }
+    
+    #nosotros p {
+        margin: 0 24px 0 13px;
+    }
+    
+    #nosotros h2 {
+        font-size: 45px;
+    }
+    
+    p {
+        font-size: 12px;
+    }
+    
+    #services {
+        height: auto;
+    }
+    
+    #services h2{
+        font-size: 45px;
+    }
+    
+    #services img {
+        width: 55%;
+        margin: 0 0 10px 0%;
+    }
+    
+    #eventos {
+        height: auto;
+    }
+    
+    #eventos h2{
+        font-size: 37px;
+    }
+    
+    #eventos img {
+        padding: 0 0 0 15%;
+    }
+    
+    #eventos div {
+        padding-bottom: 10px;
+    }
+    
+    .hidden-eventos{
+        display: none;
+    }
+    
+    #galeria h2 {
+        font-size: 45px;
+        padding: 50px 0 0 0;
+    }
+    
+    #contacto {
+        height: auto;
+    }
+    
+    #contacto p {
+        font-size: 15px;
+        margin: 0 0 6px 47px;
+    }
+    
+    #formulario{
+        margin-top: 33px;
+    }
+    
+    #contacto h2 {
+        font-size: 45px;
+    }
+    
+    .mapa{
+        width: 100%;
+    }
+    
+    #footer {
+        margin: 0;
+    }
+    
+    #footer p {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 375px){
+    #menu{
+        background-color: transparent;
+    }
+    
+    #video{
+        height: 100%;
+    }
+    
+    #nosotros p{
+        margin: 0;
+    }
+    
+    #nosotros img{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: -83%;
+    }
+    
+    #nosotros h2 {
+        font-size: 27px;
+        padding: 35% 0 10% 0;
+    }
+    
+    p {
+        font-size: 12px;
+    }
+    
+    #services {
+        height: auto;
+    }
+    
+    #services h2{
+        font-size: 27px;
+        padding: 35% 0 10% 0;
+    }
+    
+    #services img {
+        width: 50%;
+        margin: 0 0 20px 25%;
+    }
+    
+    .serv {
+        margin-left: 30px;
+    }
+    
+    #eventos {
+        height: auto;
+    }
+    
+    #eventos h2{
+        font-size: 27px;
+        padding: 35% 0 10% 0;
+    }
+    
+    #eventos img {
+        padding: 0 0 0 15%;
+    }
+    
+    #eventos div {
+        padding-bottom: 10px;
+    }
+    
+    .hidden-eventos{
+        display: none;
+    }
+    
+    #galeria h2 {
+        font-size: 27px;
+        padding: 35% 0 10% 0;
+    }
+    
+    #contacto {
+        height: auto;
+    }
+    
+    #contacto p {
+        font-size: 13px;
+        margin: 0 0 6px 47px;
+    }
+    
+    #formulario{
+        margin-top: 33px;
+    }
+    
+    #contacto h2 {
+        font-size: 27px;
+        padding: 35% 0 10% 0;
+    }
+    
+    .mapa{
+        width: 100%;
+    }
+    
+    #footer {
+        margin: 0;
+    }
+    
+    #footer p {
+        font-size: 8px;
+    }
+}
+
+@media(max-width: 360px){
+    #menu{
+        background-color: transparent;
+    }
+
+    #video{
+        height: 100%;
+    }
+    
+    #nosotros{
+        height: 350px;
+    }
+
+    #nosotros h2{
+        font-size: 22px;
+        padding: 40% 0 10% 0;
+    }
+
+    #nosotros p {
+        margin: 0 24px 0 13px;
+    }
+
+    #nosotros img {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: -103%;
+    }
+
+    #services h2{
+        font-size: 22px;
+        padding: 40% 0 10% 0;
+    }
+
+    #services img {
+        width: 80%;
+        margin: 0 0px 10px 0px;
+    }
+
+    .serv {
+        margin-left: 45px;
+    }
+
+    #eventos h2{
+        font-size: 22px;
+        padding: 40% 0 10% 0;
+    }
+
+    #galeria h2 {
+        font-size: 22px;
+        padding: 40% 0 10% 0;
+    }
+
+    #contacto h2 {
+        font-size: 22px;
+        padding: 40% 0 10% 0;
+    }
+}
+
+@media(max-width: 320px){
+    #menu{
+        background-color: transparent;
+    }
+    
+    .navbar-brand {
+        float: left;
+        height: 50px;
+        padding: 0;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    #video{
+        height: 100%;
+    }
+
+    #nosotros{
+        height: 350px;
+    }
+
+    #nosotros h2 {
+        font-size: 22px;
+        padding: 40% 0 10% 0;
+    }
+
+    #nosotros p {
+        font-size: 15px;
+    }
+
+    #nosotros img {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: -103%;
+    }
+
+    #services h2 {
+        font-size: 22px;
+        padding: 40% 0 10% 0;
+    }
+
+    #eventos h2 {
+        font-size: 22px;
+        padding: 40% 0 10% 0;
+    }
+
+    #eventos img {
+        padding: 0 0 0 0;
+    }
+
+    #galeria h2 {
+        font-size: 22px;
+        padding: 40% 0 10% 0;
+    }
+
+    #galeria img{
+        margin-left: 0px;
+    }
+
+    .flecha {
+        padding: 20px 0 20px 33px;
+    }
+
+    .flecha {
+        padding: 0;
+    }
+
+    #contacto h2 {
+        font-size: 22px;
+        padding: 40% 0 10% 0;
+    }
+
+    #contacto p {
+        font-size: 13px;
+        margin: 0 0 6px 47px;
+    }
+
+    .footer-derechos {
+        height: 100%;
+    }
+}
