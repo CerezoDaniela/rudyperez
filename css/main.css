@@ -255,8 +255,9 @@ body, html{
     transition: all 0.5s ease, outline 0.000001s;
 }
 
-.collapse.show{
-    background-color: #080B0C none repeat scroll 0% 0%;
+.bg-dark{
+    background-color: #080B0C !important;
+    transition: all 0.5s ease, outline 0.000001s;
 }
 
 /*---------------*/
@@ -264,7 +265,7 @@ body, html{
 /*---------------*/
 
 #video{
-    width: 100%;
+    min-width: 100%;
     height: 759px;
     float: left;
     display: inline;
@@ -319,10 +320,6 @@ body, html{
 
 #services img {
     width: 80%;
-}
-
-.serv {
-    margin-left: 83px;
 }
 
 /*-----------------*/
@@ -439,17 +436,18 @@ body, html{
 
 #contacto p{
     color:#787878;
-    padding-top: 15px;
 }
 
-.icono-u{
-    padding: 15px 15px 15px 15px;
-    margin: 34px 8px 33px 8px;
+#contacto iframe{
+    width: 360px;
+    height: 300px;
+    border: 0px;
 }
 
-.icono-t-c{
-    padding: 15px 15px 15px 15px;
-    margin: 17px 8px 17px 8px;
+.input-style{
+    width: 100%;
+    border-radius: 7px;
+    background: lavender;
 }
 
 .submit{
@@ -464,18 +462,24 @@ body, html{
     background: #841a11;
 }
 
-.input-style{
-    width: 100%;
-    border-radius: 7px;
-    background: lavender;
+.datos{
+    padding-top: 66px;
+    padding-bottom: 66px;
 }
 
-.title-area .title span {
-    color: #FF5A19;
+.icono-u{
+    padding: 15px 15px 15px 15px;
+    margin: 34px 8px 33px 8px;
 }
 
-.title-area .title::before {
-    background-color: #FF5A19;
+.icono-t-c{
+    padding: 15px 15px 15px 15px;
+    margin: 17px 8px 17px 8px;
+}
+
+.map{
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
 /*----------------*/
@@ -491,7 +495,6 @@ body, html{
 }
 
 #footer p{
-    height: 14px;
     color: white;
     font-size: 11px;
     padding-top: 0px;
@@ -514,9 +517,23 @@ body, html{
     #menu img {
         margin-left: 0;
     }
-    
+
     .menu{
         font-size: 14px;
+    }
+
+    #contacto iframe{
+        width: 300px;
+        height: 300px;
+        border: 0px;
+    }
+
+    .text-u{
+        padding: 36px 0 35px 0px;
+    }
+
+    .text-t-c{
+        padding: 29px 0px 28px 0px;
     }
 }
 
@@ -525,71 +542,68 @@ body, html{
     .menu{
         font-size: 13px;
     }
-    
+
     #nosotross h2 {
         padding: 7% 0 30px 0;
     }
-    
+
     #nosotros p {
         font-size: 15px;
         margin: 0 90px 0 90px;
     }
-    
+
     #nosotros img{
         float: right;
         width: 26%;
         margin: -13em -65px 0 0;
     }
-    
+
     #nosotros {
         height: 280px;
     }
-    
+
     #services img {
         width: 100%;
         margin: 0 0 0 50px;
     }
-    
+
     #eventos img {
         padding: 0 0 0 0;
         width: 100%;
     }
-    
-    .input-group-btn {
-        width: 21% !important;
-    }
-    
+
     #eventos {
         height: auto;
     }
-    
-    .serv {
-        margin-left: 0;
-    }
-    
+
     #galeria img {
         width: 100%;
     }
-    
+
     #contacto {
         height: auto;
     }
-    
+
     #contacto p{
         font-size: 15px;
-        margin: 0;
     }
-    
+
     #contacto img{
         float: left;
     }
-    
+
+    #contacto iframe{
+        width: 337px;
+        height: 300px;
+        border: 0px;
+    }
+
     .mapa{
         width: 100%;
     }
 }
 
-@media(max-width: 767px){
+@media(max-width: 768px){
     #menu {
         width: 100%;
         height: 80px;
@@ -598,10 +612,14 @@ body, html{
         background-color: transparent;
     }
 
+    #menu img{
+        width: 127px;
+    }
+
     #services {
         height: auto;
     }
-    
+
     #services img {
         width: 40%;
         margin: 5px 0px 0 100px;
@@ -609,10 +627,6 @@ body, html{
 
     #eventos {
         height: auto;
-    }
-
-    .hidden-eventos{
-        display: none;
     }
 
     #eventos img {
@@ -624,13 +638,8 @@ body, html{
         width: 100%;
     }
 
-    .serv {
-        margin-left: 100px;
-    }
-
     #contacto p {
         font-size: 15px;
-        margin: -13px 228px 13px 50px;
     }
 }
 
@@ -642,11 +651,11 @@ body, html{
         height: 80px;
         background-color: transparent;
     }
-    
+
     #video{
-        height: 100%; 
+        height: 100%;
     }
-    
+
     #nosotros img {
         float: right;
         width: 26%;
@@ -656,7 +665,7 @@ body, html{
     #services {
         height: auto;
     }
-    
+
     #services img {
         width: 40%;
         margin: 5px 0px 0 100px;
@@ -664,10 +673,6 @@ body, html{
 
     #eventos {
         height: auto;
-    }
-
-    .hidden-eventos{
-        display: none;
     }
 
     #eventos img {
@@ -690,88 +695,119 @@ body, html{
     #video{
         height: 100%;
     }
-    
+
+    #nosotros{
+        height: 350px;
+    }
+
     #nosotros img{
         width: 45%;
         margin-left: 25%;
         margin-top: -74%;
     }
-    
+
     #nosotros p {
         margin: 0 24px 0 13px;
     }
-    
+
     #nosotros h2 {
-        font-size: 45px;
+        font-size: 31px;
+        padding: 30% 0 3% 0;
     }
-    
+
     p {
         font-size: 12px;
     }
-    
+
     #services {
         height: auto;
     }
-    
+
     #services h2{
-        font-size: 45px;
+        font-size: 31px;
+        padding: 30% 0 3% 0;
     }
-    
+
     #services img {
         width: 55%;
         margin: 0 0 10px 0%;
     }
-    
+
     #eventos {
         height: auto;
     }
-    
+
     #eventos h2{
-        font-size: 37px;
+        font-size: 31px;
+        padding: 30% 0 3% 0;
     }
-    
+
     #eventos img {
         padding: 0 0 0 15%;
     }
-    
+
     #eventos div {
         padding-bottom: 10px;
     }
-    
-    .hidden-eventos{
-        display: none;
-    }
-    
+
     #galeria h2 {
-        font-size: 45px;
-        padding: 50px 0 0 0;
+        font-size: 31px;
+        padding: 30% 0 3% 0;
     }
-    
+
     #contacto {
         height: auto;
     }
-    
+
+    #contacto h2 {
+        font-size: 31px;
+        padding: 30% 0 3% 0;
+    }
+
     #contacto p {
         font-size: 15px;
-        margin: 0 0 6px 47px;
     }
-    
-    #formulario{
-        margin-top: 33px;
+
+    #contacto iframe{
+        width: 309px;
+        height: 300px;
+        border: 0px;
     }
-    
-    #contacto h2 {
-        font-size: 45px;
+
+    .datos{
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
-    
+
+    .icono-u{
+        padding: 15px 0px 15px 0px;
+    }
+
+    .text-u{
+        padding: 36px 0 35px 0px;
+    }
+
+    .icono-t-c{
+        padding: 15px 0px 15px 0px;
+    }
+
+    .text-t-c{
+        padding: 29px 0px 28px 0px;
+    }
+
+    .map{
+        padding-top: 0px;
+        padding-bottom: 15px;
+    }
+
     .mapa{
         width: 100%;
     }
-    
+
     #footer {
         margin: 0;
     }
-    
+
     #footer p {
         font-size: 10px;
     }
@@ -781,100 +817,123 @@ body, html{
     #menu{
         background-color: transparent;
     }
-    
+
     #video{
         height: 100%;
     }
-    
+
+    #nosotros{
+        height: 350px;
+    }
+
     #nosotros p{
         margin: 0;
     }
-    
+
     #nosotros img{
         width: 50%;
         margin-left: 25%;
         margin-top: -83%;
     }
-    
+
     #nosotros h2 {
         font-size: 27px;
         padding: 35% 0 10% 0;
     }
-    
+
     p {
         font-size: 12px;
     }
-    
+
     #services {
         height: auto;
     }
-    
+
     #services h2{
         font-size: 27px;
         padding: 35% 0 10% 0;
     }
-    
+
     #services img {
         width: 50%;
         margin: 0 0 20px 25%;
     }
-    
-    .serv {
-        margin-left: 30px;
-    }
-    
+
     #eventos {
         height: auto;
     }
-    
+
     #eventos h2{
         font-size: 27px;
         padding: 35% 0 10% 0;
     }
-    
+
     #eventos img {
         padding: 0 0 0 15%;
     }
-    
+
     #eventos div {
         padding-bottom: 10px;
     }
-    
-    .hidden-eventos{
-        display: none;
-    }
-    
+
     #galeria h2 {
         font-size: 27px;
         padding: 35% 0 10% 0;
     }
-    
+
     #contacto {
         height: auto;
     }
-    
-    #contacto p {
-        font-size: 13px;
-        margin: 0 0 6px 47px;
-    }
-    
-    #formulario{
-        margin-top: 33px;
-    }
-    
+
     #contacto h2 {
         font-size: 27px;
         padding: 35% 0 10% 0;
     }
-    
+
+    #contacto p {
+        font-size: 13px;
+    }
+
+    #contacto iframe{
+        width: 270px;
+        height: 300px;
+        border: 0px;
+    }
+
+    .datos{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .icono-u{
+        padding: 15px 0px 15px 0px;
+    }
+
+    .text-u{
+        padding: 26px 0 25px 0px;
+    }
+
+    .icono-t-c{
+        padding: 15px 0px 15px 0px;
+    }
+
+    .text-t-c{
+        padding: 29px 0px 28px 0px;
+    }
+
+    .map{
+        padding-top: 0px;
+        padding-bottom: 15px;
+    }
+
     .mapa{
         width: 100%;
     }
-    
+
     #footer {
         margin: 0;
     }
-    
+
     #footer p {
         font-size: 8px;
     }
@@ -888,7 +947,7 @@ body, html{
     #video{
         height: 100%;
     }
-    
+
     #nosotros{
         height: 350px;
     }
@@ -918,10 +977,6 @@ body, html{
         margin: 0 0px 10px 0px;
     }
 
-    .serv {
-        margin-left: 45px;
-    }
-
     #eventos h2{
         font-size: 22px;
         padding: 40% 0 10% 0;
@@ -936,21 +991,44 @@ body, html{
         font-size: 22px;
         padding: 40% 0 10% 0;
     }
+
+    #contacto iframe{
+        width: 255px;
+        height: 300px;
+        border: 0px;
+    }
+
+    .icono-u{
+        padding: 15px 0px 15px 0px;
+    }
+
+    .text-u{
+        padding: 36px 0 35px 0px;
+        margin-bottom: 0px;
+    }
+
+    .icono-t-c{
+        padding: 15px 0px 15px 0px;
+    }
+
+    .text-t-c{
+        padding: 29px 0px 28px 0px;
+        margin-bottom: 0px;
+    }
 }
 
 @media(max-width: 320px){
     #menu{
         background-color: transparent;
     }
-    
+
     .navbar-brand {
         float: left;
-        height: 50px;
         padding: 0;
         font-size: 18px;
         line-height: 20px;
     }
-    
+
     #video{
         height: 100%;
     }
@@ -1012,7 +1090,30 @@ body, html{
 
     #contacto p {
         font-size: 13px;
-        margin: 0 0 6px 47px;
+    }
+
+    #contacto iframe{
+        width: 215px;
+        height: 300px;
+        border: 0px;
+    }
+
+    .icono-u{
+        padding: 15px 0px 15px 0px;
+    }
+
+    .text-u{
+        padding: 26px 0 25px 0px;
+        margin-bottom: 0px;
+    }
+
+    .icono-t-c{
+        padding: 15px 0px 15px 0px;
+    }
+
+    .text-t-c{
+        padding: 29px 0px 28px 0px;
+        margin-bottom: 0px;
     }
 
     .footer-derechos {
