@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
@@ -33,13 +33,12 @@
         <link href="https://fonts.googleapis.com/css?family=Iceland&amp;subset=latin-ext" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Iceberg&amp;subset=latin-ext" rel="stylesheet">
 
-
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
         <!-- REDES SOCIALES -->
 
-        <div class='botones-sociales derecha hidden-phone hidden-tablet'>
+        <div id="redesSociales" class='botones-sociales derecha hidden-phone hidden-tablet'>
             <a class='itemsocial Iceberg' href='https://es-la.facebook.com/TITLEBoxingClub/' id='facebook-btn' target='_blank'><span class='social'><span class='texto'>Facebook</span></span></a>
             <a class='itemsocial Iceberg' href='https://twitter.com/titleboxingclub?lang=es' id='twitter-btn' target='_blank'><span class='social'><span class='texto'>Twitter</span></span></a>
             <a class='itemsocial Iceberg' href='https://www.instagram.com/titleboxing/' id='instagram-btn' target='_blank'><span class='social'><span class='texto'>Instagram</span></span></a>
@@ -416,6 +415,9 @@
         <!-- PIE DE PÁGINA -->
 
         <footer id="footer" class="container-fluid">
+            <div id="redes" class="center">
+            </div>
+            <p id="creadores" class="center Montserrat" style="font-size: 12px;"></p>
             <div class="center footer-derechos">
                 <p>© TODOS LOS DERECHOS RESERVADOS ESCUELA DE BOX - RUDY PÉREZ 2018.</p>
             </div>
@@ -441,7 +443,7 @@
                 }
             }
 
-            // Cuando el dispositivo sea menor a los 640px se mostrara una imagen de presentación, de lo contrario se reproducira un video
+            // Cuando el tamaño del dispositivo sea menor o igual a los 640px se mostrara una imagen de presentación, de lo contrario se reproducira un video
             var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
             var id = document.getElementById('video');
@@ -453,6 +455,26 @@
                 id.innerHTML = id.innerHTML.replace(oldEtiqueta, newEtiqueta);
             } else {
                 id.innerHTML = id.innerHTML.replace(newEtiqueta, etiqueta);
+            }
+
+            //Cuando el tamaño del dispositivo se menor o igual a los 1024px las redes sociales apareceran en el footer, de lo contrario se mostraran en una barra lateral
+            var redesSociales = document.getElementById('redesSociales');
+            var rs = redesSociales.innerHTML = '<a class="itemsocial Iceberg" href="https://es-la.facebook.com/TITLEBoxingClub/" id="facebook-btn" target="_blank"><span class="social"><span class="texto">Facebook</span></span></a><a class="itemsocial Iceberg" href="https://twitter.com/titleboxingclub?lang=es" id="twitter-btn" target="_blank"><span class="social"><span class="texto">Twitter</span></span></a><a class="itemsocial Iceberg" href="https://www.instagram.com/titleboxing/" id="instagram-btn" target="_blank"><span class="social"><span class="texto">Instagram</span></span></a><a class="itemsocial Iceberg" href="https://www.youtube.com/TITLE%20Boxing%20Club" id="youtube-btn" target="_blank"><span class="social"><span class="texto">Youtube</span></span></a>';
+
+            var redes = document.getElementById('redes');
+            var r = redes.innerHTML = '<a id="facebook" href="https://www.facebook.com/TITLEBoxingClub/"><i class="fab fa-facebook-square"></i></a><a id="instagram" href="https://www.instagram.com/titleboxing/"><i class="fab fa-instagram"></i></a><a id="twitter" href="https://twitter.com/titleboxingclub/"><i class="fab fa-twitter"></i></a><a id="youtube" href="https://www.youtube.com/TITLE%20Boxing%20Club/"><i class="fab fa-youtube"></i></a>';
+
+            var creadores = document.getElementById('creadores');
+            var c = creadores.innerHTML = 'Creaded by <a id="empresa" href="https://www.jardtechnology.com/" style="text-decoration: none;">JARD Technology</a>';
+
+            if (w <= 1024) {
+                redesSociales.remove();
+                redes.innerHTML = redes.innerHTML = r;
+                creadores.innerHTML = creadores.innerHTML = c;
+            } else {
+                redes.remove();
+                creadores.remove();
+                redesSociales.innerHTML = redesSociales.innerHTML = rs;
             }
 
             $(document).on("click", ".img-eventos", function(){
