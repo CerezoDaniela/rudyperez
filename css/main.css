@@ -355,33 +355,54 @@ body, html{
 
 /* DANNY */
 
-#contGaleria{
-    background-color: #F2A30F;
+.imagen{
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.cargaMas{
-    background-color: #F2A30F;
+#detalleImg{
+    display: none;
+    margin-top: 50px;
+    background-color: #101010d9;
+    z-index: 100;
+    height: 762px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+#img, #imgDtl{
+    width: 80%;
+}
+.contFlecha{
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.flecha{
+    width: 90%;
+}
+.imgFull{
+    display: inline;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+#cerrar{
     width: 5%;
 }
-
-.image{
-    border:1px solid blue;
+#contCerrar{
+    text-align: right;
 }
-
-.contImg{
-    margin: 10px 0px;
+.contView{
+    padding-right: 0px;
+    padding-left: 0px;
 }
-
-.play{
-    position: absolute;
-    padding: 5.9%;
+#contGaleria{
+    text-align: center;
 }
-
-.column{
-    flex: 50%;
-    padding: 0 4px;
+#footer{
+    color: #FFFFFF;
 }
-
 /* JEZZ */
 
 #galeria {

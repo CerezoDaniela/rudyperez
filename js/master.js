@@ -1,56 +1,87 @@
+var sURL = "https://api.instagram.com/v1/users/self/media/recent/?count=4&access_token=7640512853.a95ebde.5047c855f9f54935a53a70c9ea651c24";
+		//var sURL = "https://api.instagram.com/v1/users/self/media/recent/?count=4&access_token=1762250453.2149165.58f3208c90c94d4e94056a5a290d56bc";
+var inf = {"datos" : []};
+var i = 0;var x = 0;var lng = 0; var iDatos = 0;
+var iGlobal = 0;
 
-var sURL = "https://api.instagram.com/v1/users/self/media/recent/?count=4&access_token=1762250453.2149165.58f3208c90c94d4e94056a5a290d56bc";
-
-function getMedia(URL)
-{
+function traeDatos(link){
+	$("#verMas").css("display", "none");
 	$.ajax({
 		method : "GET",
-		url    : URL
+		url    : link,
+		async  : false
 	}).done(function(data){
-		var iMax = 0;
-		var len = data.data.length; 
 
-		for(var i = 0; i < len; i ++)
-		{
-			var imgH = data.data[i].images.standard_resolution.height;
-	
-			var resize = ((imgH * 46.33) / 100);
-			resize = resize.toFixed(1);
+		var lng = data.data.length;
+		i=0;
 
-			if(resize > iMax)
-				iMax = resize;
-	
-			var faltante = ((resize - iMax) * -1);
-		}
+		do{
+			var id = data.data[i].id;
+			var urlImg = data.data[i].images.standard_resolution.url;
+			var caption = ((data.data[i].caption != undefined || data.data[i].caption != null) ? data.data[i].caption.text : "");
+	    	
+	    	inf.datos.push({"sURL" : urlImg, "footer" : caption});
+					
+			$("#contCarousel").append("<div class=' gal carousel-item' id='_"+x+"'><img class='d-block w-100' src='"+urlImg+"' alt='Second slide'></div>");
+			$("#contGaleria").append('<div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-5 imagen p-0" id="'+id+'" onclick="ver('+x+')" data-target="#exampleModalCenter" data-toggle="modal"></div>');
+			$("#"+id).css({"background-image":"url('"+urlImg+"')"});
+			i += 1;
+			x += 1;
+
+		}while(i < lng);
+
+		sURL = data.pagination.next_url;
+		inf.sig = inf.sig = sURL
+
+		$("#verMas").css("display", "block");
+	    
+	    if(lng < 4)
+			$("#verMas").css("display", "none");
+	})
+}
+
+function ver(p){
+	iGlobal = p;
 			
-		var id = data.pagination.next_max_id;
-		$("#contGaleria").append('<div class="col-xs-12" id="cont_' + id + '"></div>');
+	$("#footer").text(inf.datos[p].footer);
 
-		for(var i=0; i < len; i++)
+	var lActivs = $(".gal");
+		
+		for(var j = 0; j < lActivs.length; j++)
 		{
-			var url = data.data[i].images.standard_resolution.url;
-			var imgH = data.data[i].images.standard_resolution.height;
-			var tipo = data.data[i].type;
-				
-			var resize = ((imgH * 46.33) / 100);
-			resize = resize.toFixed(1);
-
-			var img = ((tipo == "video") ? "<a href='" + data.data[i].link + "'><img src='assets/images/icons/play.png' class='img-responsive play' /><img class='img-responsive'" + tipo + "' src='" + url + "'/></a>" : "<img class='img-responsive' src='" + url + "'/>")
-			if(resize < iMax)
-			{
-				var faltante = ((resize - iMax) * -1) / 2;
-				img = '<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 contImg" style="padding-top:' + faltante + 'px; padding-bottom:' + faltante + 'px;" > ' + img + '</div>';
-			}
-			else
-				img = '<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 contImg"> ' + img + ' </div>';
-
-			$("#cont_"+id).append(img);
+			if(lActivs[j].classList.contains("active"))
+				break;
 		}
-			if(data.data.length < 4)
-				$("#loadMore").remove();
+		if(lActivs[j] != undefined){
+			var id = lActivs[j].id;
+		
+		
+		$('#'+id).removeClass("active");	
+		}
+		$('#_'+p).addClass("active");
+}
+		
+function evalua(op){
 
-			sURL = data.pagination.next_url;
-		})
+ 	iGlobal = ((op == 1) ? iGlobal + 1 : iGlobal -1);
+
+ 	if(iGlobal == -1){
+		iGlobal = inf.datos.length-1;
+
+		$("#footer").text(inf.datos[iGlobal].footer);
+		//return;
+	}
+	
+
+
+	if(inf.datos[iGlobal] == undefined || inf.datos[iGlobal] == null ){
+		if(inf.sig != undefined)
+			traeDatos(inf.sig);
+		else
+			iGlobal = 0;
+	}
+
+	$("#footer").text(inf.datos[iGlobal].footer);
 }
 
 $(document).ready(function(){
@@ -58,8 +89,9 @@ $(document).ready(function(){
     $(".navbar-nav li").click(function(){
         $('.navbar-nav li.active').removeClass('active');
         $(this).addClass('active');
-    })
+    });
 
-    getMedia(sURL);
+    traeDatos(sURL);
+		
 })
 
