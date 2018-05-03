@@ -213,6 +213,54 @@ body, html{
     white-space: nowrap;
 }
 
+#redes{
+    padding: 32px 0 32px 0;
+}
+
+#facebook{
+    color: white;
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#facebook i:hover{
+    color: #0072b1; /*#3B5998;*/ /*#3A5795;*/
+}
+
+#twitter{
+    color: white;
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#twitter i:hover{
+    color: #55acee /*#5EA9DD;*/
+}
+
+#instagram{
+    color: white;
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#instagram i:hover{
+    color: #e95950;/*#fb3958;*/ /*#2A5B83;*/
+}
+
+#youtube{
+    color: white;
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#youtube i:hover{
+    color: #ff0000; /*#CC181E;*/
+}
+
 /*----------------*/
 /*     HEADER     */
 /*----------------*/
@@ -514,6 +562,15 @@ body, html{
     font-size: 11px;
     padding-top: 0px;
     margin: 8px 0 8px 0;
+}
+
+#empresa{
+    color: white;
+    text-decoration: none;
+}
+
+#empresa:hover{
+    color: #00bf8f;
 }
 
 .footer-derechos{
