@@ -387,12 +387,7 @@ body, html{
     padding-right: 0px;
     padding-left: 0px;
 }
-#cerrar{
-    width: 5%;
-}
-#contCerrar{
-    text-align: right;
-}
+
 .contView{
     padding-right: 0px;
     padding-left: 0px;
@@ -428,15 +423,14 @@ body, html{
     margin: auto;
     display: block;
     background: none;
+    margin-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 #galeria img{
     margin:auto;
     display:block;
-}
-
-.flecha{
-    padding: 20px 0 20px 0;
 }
 
 /*------------------*/

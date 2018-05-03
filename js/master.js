@@ -22,7 +22,7 @@ function traeDatos(link){
 	    	
 	    	inf.datos.push({"sURL" : urlImg, "footer" : caption});
 					
-			$("#contCarousel").append("<div class=' gal carousel-item' id='_"+x+"'><img class='d-block w-100' src='"+urlImg+"' alt='Second slide'></div>");
+			//$("#contCarousel").append("<div class=' gal carousel-item' id='_"+x+"'><img class='d-block w-100' src='"+urlImg+"' alt='Second slide'></div>");
 			$("#contGaleria").append('<div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-5 imagen p-0" id="'+id+'" onclick="ver('+x+')" data-target="#exampleModalCenter" data-toggle="modal"></div>');
 			$("#"+id).css({"background-image":"url('"+urlImg+"')"});
 			i += 1;
@@ -45,20 +45,8 @@ function ver(p){
 			
 	$("#footer").text(inf.datos[p].footer);
 
-	var lActivs = $(".gal");
-		
-		for(var j = 0; j < lActivs.length; j++)
-		{
-			if(lActivs[j].classList.contains("active"))
-				break;
-		}
-		if(lActivs[j] != undefined){
-			var id = lActivs[j].id;
-		
-		
-		$('#'+id).removeClass("active");	
-		}
-		$('#_'+p).addClass("active");
+	$("#imgCarousel").attr("src", inf.datos[p].sURL);
+	$("#bodyCarousel").addClass("active");
 }
 		
 function evalua(op){
@@ -67,13 +55,10 @@ function evalua(op){
 
  	if(iGlobal == -1){
 		iGlobal = inf.datos.length-1;
-
+		$("#imgCarousel").attr("src", inf.datos[iGlobal].sURL);
 		$("#footer").text(inf.datos[iGlobal].footer);
-		//return;
 	}
 	
-
-
 	if(inf.datos[iGlobal] == undefined || inf.datos[iGlobal] == null ){
 		if(inf.sig != undefined)
 			traeDatos(inf.sig);
@@ -81,6 +66,7 @@ function evalua(op){
 			iGlobal = 0;
 	}
 
+	$("#imgCarousel").attr("src", inf.datos[iGlobal].sURL);
 	$("#footer").text(inf.datos[iGlobal].footer);
 }
 

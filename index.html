@@ -69,7 +69,7 @@
                     </ul>
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link blanco Keania-One" href="#"><span class="glyphicon glyphicon-user"></span> REGÍSTRATE</a></li>
-                        <li class="nav-item"><a class="nav-link blanco Keania-One" href="#"><span class="glyphicon glyphicon-log-in"></span> INGRESA</a></li>
+                        <li class="nav-item"><a class="nav-link blanco Keania-One" href="login.html"><span class="glyphicon glyphicon-log-in"></span> INGRESA</a></li>
                     </ul>
                 </div>
             </nav>
@@ -282,7 +282,7 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="background-color: #e94b35;">
                 <div class="col-12"><center><h1>Galería</h1></center></div>
                 <div id="contGaleria" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"></div>
-                <center><img src="img/mas.png" id="verMas" onclick="traeDatos(sURL)"></center>
+                <center><img src="img/mas.png" id="verMas" onclick="traeDatos(sURL)" style=" width: 7%;"></center>
                 <!-- Modal -->
             <main class="col-12 col-md-9 col-xl-12 col-md-12 col-md-12 bd-content" role="main">
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -297,6 +297,7 @@
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                           <!--Carousel-->
                           <div class="carousel-inner" id="contCarousel">
+                            <div class="carousel-item active" id="bodyCarousel"><img class="d-block w-100" src="" alt="" id="imgCarousel"></div>
                           </div>
                           <!--//Carousel-->
                           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" onclick="evalua(0)">

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style type="text/css">
+		body{
+			background-color: #000;
+		}
+		#frmLogin{
+			background-color: #9696969e;
+			padding: 15px 0px;
+			height: 50%;
+			margin-top: 10%;
+			margin-bottom: 10%;
+		}
+		input[type=email] {
+			border-top: 0px;
+			border-left: 0px;
+			border-right: 0px;
+			border-bottom: 2px solid #000;
+			background-color: #fff0;
+			color: #FFFFFF;
+			width: 90%;
+		}
+		input[type=password] {
+			border-top: 0px;
+			border-left: 0px;
+			border-right: 0px;
+			border-bottom: 2px solid #000;
+			background-color: #fff0;
+			color: #FFFFFF;
+			width: 90%;
+		}
+		input[type=email]:focus {
+			background-color: #fff0;
+		    border-bottom: 3px solid #e94b35;
+		    color: #FFFFFF;
+		}
+		input[type=password]:focus {
+			background-color: #fff0;
+		    border-bottom: 3px solid #e94b35;
+		    color: #FFFFFF;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="contGral">
+					<div>
+						<center>
+							<form id="frmLogin">
+								<div class="form-group">
+									<img id="logoLgn" src="img/ico.png">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" id="usr" aria-describedby="emailHelp" placeholder="Usuario">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="pwd" placeholder="Contraseña">
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-danger">Entrar</button>
+								</div>
+							</form>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
