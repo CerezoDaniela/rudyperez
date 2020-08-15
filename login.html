@@ -1,67 +1,79 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="stylelogin.css" rel="stylesheet">
-        <link href="assets/css/font-awesome.css" rel="stylesheet">
-        <!-- Bootstrap -->
-        <link href="assets/css/bootstrap.css" rel="stylesheet">  
-        <!-- Main Style -->
-        <link href="style.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-        <title>Boxing Club - Login</title>
-  </head>
-  <body class="bg">
-    <header id="menu">
-        <nav class="navbar navbar-inverse menu">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
-              </button>
-              <a class="navbar-brand" href="index.html"><img src="assets/images/logo/logo-box-bw-sl.png"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                <li><a class="text-red" href="index.html">NOSOTROS</a></li>
-                <li><a class="text-red" href="index.html">SERVICIOS</a></li>
-                <li><a class="text-red" href="index.html">EVENTOS</a></li>
-                <li><a class="text-red" href="index.html">GALERÍA</a></li>
-                <li><a class="text-red" href="index.html">CONTACTO</a></li>
-                <li><a class="text-gold" href="index.html">FUNDADOR</a></li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">INGRESAR</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-    </header>
-
-    <div>
-    <form>
-      <h1>BOXING CLUB-RUDY PÉREZ</h1>
-      <div class="inset">
-      <p>
-        <label for="email">USUARIO</label>
-        <input type="text" name="email" id="email">
-      </p>
-      <p>
-        <label for="password">CONTRASEÑA</label>
-        <input type="password" name="password" id="password">
-      </p>
-        </div>
-      <p class="p-container">
-        <span> <a href="">Olvide mi contraseña?</a></span>
-        <input type="submit" name="go" id="go" value="Entrar">
-      </p>
-    </form>
-    </div>  
-  </body>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style type="text/css">
+		body{
+			background-color: #000;
+		}
+		#frmLogin{
+			background-color: #9696969e;
+			padding: 15px 0px;
+			height: 50%;
+			margin-top: 10%;
+			margin-bottom: 10%;
+		}
+		input[type=email] {
+			border-top: 0px;
+			border-left: 0px;
+			border-right: 0px;
+			border-bottom: 2px solid #000;
+			background-color: #fff0;
+			color: #FFFFFF;
+			width: 90%;
+		}
+		input[type=password] {
+			border-top: 0px;
+			border-left: 0px;
+			border-right: 0px;
+			border-bottom: 2px solid #000;
+			background-color: #fff0;
+			color: #FFFFFF;
+			width: 90%;
+		}
+		input[type=email]:focus {
+			background-color: #fff0;
+		    border-bottom: 3px solid #e94b35;
+		    color: #FFFFFF;
+		}
+		input[type=password]:focus {
+			background-color: #fff0;
+		    border-bottom: 3px solid #e94b35;
+		    color: #FFFFFF;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="contGral">
+					<div>
+						<center>
+							<form id="frmLogin">
+								<div class="form-group">
+									<img id="logoLgn" src="img/ico.png">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" id="usr" aria-describedby="emailHelp" placeholder="Usuario">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="pwd" placeholder="Contraseña">
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-danger">Entrar</button>
+								</div>
+							</form>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
